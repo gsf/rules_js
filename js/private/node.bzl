@@ -54,7 +54,7 @@ def js_repositories():
     version      = '3.2.0',
     type_version = '2.2.37',
     ignore_deps  = [
-      'browser.stdout',
+      'browser_stdout',
       'growl',
     ]
   )

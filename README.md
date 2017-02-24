@@ -50,8 +50,8 @@ When using `npm_install`, a module will be created with the source for that NPM
 project. For a simply named library (say `react`), other modules are free to
 depend on a module named `@react//:lib`. However, the `-` character (and perhaps
 others) is not allowed in external names with Bazel, so they will be replaced
-with a `.`. For example, `honk-di` would be required in a `BUILD` file as
-`@honk.di//:lib`.
+with a `_`. For example, `honk-di` would be required in a `BUILD` file as
+`@honk_di//:lib`.
 
 These rules will declare dependencies, but they will not resolve them. For
 example, if you declare an `npm_install` rule for `@bar//:lib`, which depends on

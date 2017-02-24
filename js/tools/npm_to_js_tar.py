@@ -86,7 +86,7 @@ def _write_buildfile(filename, deps, js_tar_name, ignore_deps,
   for dep in sorted(deps.keys()):
     if dep in to_ignore: continue
 
-    bazel_name = dep.replace('-', '.')
+    bazel_name = dep.replace('-', '_')
     if bazel_name in to_ignore: continue
 
     version = deps[dep]

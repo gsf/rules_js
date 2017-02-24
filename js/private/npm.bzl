@@ -2,10 +2,10 @@
 def _external_name(name):
   """
   Bazel does not allow dashes in external names. Follow the convention of
-  replacing dashes with dots. Consumers of NPM dependencies need to be aware of
-  this rule
+  replacing dashes with underscores. Consumers of NPM dependencies need
+  to be aware of this rule.
   """
-  return name.replace('-', '.')
+  return name.replace('-', '_')
 
 
 def _download_npm_tar(ctx, filename, package, version, namespace=None,
